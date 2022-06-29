@@ -1,0 +1,1077 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Template Main CSS File -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Vikalp</title>
+
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="{% static 'assets/img/logo3.jpg' %}" rel="icon" />
+    <link
+      href="{% static 'assets/img/apple-touch-icon.png' %}"
+      rel="apple-touch-icon"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/animate.css/animate.min.css' %}"
+      rel="stylesheet"
+    />
+    <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+    <link
+      href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ======= Top Bar ======= -->
+    <div id="topbar" class="d-flex align-items-center fixed-top">
+      <div
+        class="container d-flex align-items-center justify-content-center justify-content-md-between"
+      >
+        <div class="align-items-center d-none d-md-flex">
+          Technology for everyone
+        </div>
+        <div class="d-flex align-items-center">Join us</div>
+      </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+        <a href="/" class="logo me-auto"
+          ><img src="{% static 'assets/img/logo2.png' %}" alt="logo"
+        /></a>
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+            <li><a class="nav-link scrollto" href="#about">About us</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#pricing">Our Services</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="#departments">Our Journey</a>
+            </li>
+            <li><a class="nav-link scrollto" href="#doctors">Our Team</a></li>
+
+            <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+
+            <li><a class="nav-link scrollto" href="/home">LEARN ISL</a></li>
+            <li><a class="nav-link scrollto" href="/sharing">SHARE</a></li>
+            <li><a class="nav-link scrollto" href="/practice">PRACTICE</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+
+        {% comment %}
+        <a
+          href="/home"
+          class="appointment-btn scrollto btn btn btn-md active"
+          role="button"
+          aria-pressed="true"
+          ><span class="d-none d-md-inline">LEARN ISL</span></a
+        >
+        <a
+          href="/sharing"
+          class="appointment-btn scrollto btn btn btn-md active"
+          role="button"
+          aria-pressed="true"
+          ><span class="d-none d-md-inline">SHARE</span></a
+        >
+        <a
+          href="/practice"
+          class="appointment-btn scrollto btn btn btn-md active"
+          role="button"
+          aria-pressed="true"
+          ><span class="d-none d-md-inline">PRACTICE</span></a
+        >
+        {% endcomment %}
+        <!-- <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Login</span> </a> -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div
+        id="heroCarousel"
+        data-bs-interval="5000"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide 1 -->
+          <div
+            class="carousel-item active"
+            style="background-image: url('static/assets/img/slide/Slide1.png')"
+          >
+            <div class="container">
+              <h2>Welcome to <span>Vikalp</span></h2>
+              <p>
+                "VIKALP": a Hindi word translates to solution: an alternative.
+                We have created "Vikalp" with love, care and concern. A
+                community to learn, contribute and share Indian Sign Language.
+              </p>
+              <a href="#about" class="btn-get-started scrollto">Read More</a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            class="carousel-item"
+            style="background-image: url('static/assets/img/slide/Slide2.jpg')"
+          >
+            <div class="container">
+              <h2>Learning with VIKALP</h2>
+              <p>
+                India is home to approximately 63 million people of the Deaf and
+                Hard of Hearing community (DHH), but at present there are less
+                than 300 ISL certified instructors. Vikalp aims at bridging this
+                gap.
+              </p>
+              <a href="#about" class="btn-get-started scrollto">Read More</a>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div
+            class="carousel-item"
+            style="background-image: url('static/assets/img/slide/Slide3.png')"
+          >
+            <div class="container">
+              <h2>Indian Sign Language for all</h2>
+              <p>
+                Although, sign language has been evolving within the country
+                over years, due to general lack of awarenes in India about sign
+                lanaguges, it was not until 2017 when the Indian government
+                decided to codify sign language in a dictionary format. Learning
+                Indian Sign Language will bridge the gap between DHH and hearing
+                community, leading to greater sensitivity, collaboration and
+                knowledge exchange.
+              </p>
+              <a href="#about" class="btn-get-started scrollto">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="carousel-control-prev"
+          href="#heroCarousel"
+          role="button"
+          data-bs-slide="prev"
+        >
+          <span
+            class="carousel-control-prev-icon bi bi-chevron-left"
+            aria-hidden="true"
+          ></span>
+        </a>
+
+        <a
+          class="carousel-control-next"
+          href="#heroCarousel"
+          role="button"
+          data-bs-slide="next"
+        >
+          <span
+            class="carousel-control-next-icon bi bi-chevron-right"
+            aria-hidden="true"
+          ></span>
+        </a>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+      <!-- ======= Featured Services Section ======= -->
+      <section id="featured-services" class="featured-services">
+        <div class="container" data-aos="fade-up">
+          <div class="row">
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="fas fa-solid fa-hands"></i></div>
+                <h4 class="title"><a href="/home">Learning</a></h4>
+                <p class="description">
+                  Learn ISL with our powerful speech/text to sign convertor made
+                  with curated Indian Sign Language videos.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="fas fa-solid fa-upload"></i></div>
+                <h4 class="title"><a href="/sharing">Sharing</a></h4>
+                <p class="description">
+                  Share and contribute videos/images of Indian Sign Language
+                  and/or local sign language of your region for knowledge
+                  exchange and collection of learning resources.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="fas fa-solid fa-video"></i></div>
+                <h4 class="title"><a href="">Practicing</a></h4>
+                <p class="description">
+                  Improve your sign language skills by practicing virtually on
+                  one-on-one meets by using our platform.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
+            >
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon">
+                  <i class="fas fa-solid fa-handshake"></i>
+                </div>
+                <h4 class="title">
+                  <a href="/practice">Join the community</a>
+                </h4>
+                <p class="description">
+                  Organize virtual/offline events and find people with similar
+                  interests. Join groups and make like-minded friends. Bridge
+                  the gap
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Featured Services Section -->
+
+      <!-- ======= headline Section ======= -->
+      <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+          <div class="text-center">
+            <h3>Our mission</h3>
+            <p>
+              We aim to create an inclusive community by leveraging both
+              technology and community.
+            </p>
+            <a class="cta-btn scrollto" href="#appointment">Learn with us</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Cta Section -->
+
+      <!-- ======= About Us Section ======= -->
+      <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>About Us</h2>
+            <p>
+              Vikalp is an initiative to bridge the gap between hearing and
+              DHH(Deaf and Hard of Hearing) community by educating both the
+              communities through Indian Sign Language.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <img
+                src="{% static 'assets/img/About.png' %}"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <h3>Our vision</h3>
+              <p class="fst-italic"></p>
+              <ul>
+                <li>
+                  <i class="bi bi-check-circle"></i> To Spread awareness about
+                  Indian Sign Language.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> To Generate more than 300%
+                  of current ISL interpreters in the country.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> To Curate, Document and
+                  make ISL Accessible for all.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle"></i> To implement better learing
+                  models through a well-documented database
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Us Section -->
+
+      <!-- ======= Counts Section ======= -->
+      <section id="counts" class="counts">
+        <div class="container" data-aos="fade-up">
+          <div class="row no-gutters">
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fas fa-globe"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="430"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+
+                <p>
+                  <strong>million</strong> people worldwide have disabling
+                  hearing loss.
+                </p>
+                <a
+                  href="https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss"
+                  >Find out more &raquo;</a
+                >
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fa fa-users"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="63"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>million</strong> people in India have disabling
+                  hearing loss.
+                </p>
+                <a
+                  href="https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=1051&lid=606#:~:text=As%20per%20WHO%20estimates%20in,at%206.3%25%20in%20Indian%20population."
+                  >Find out more &raquo;</a
+                >
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fas fa-globe"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="300"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>ISL interpreters</strong> for over 50 million+ people.
+                </p>
+                <a href="#">Find out more &raquo;</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+              <div class="count-box">
+                <i class="fa fa-users"></i>
+                <span
+                  data-purecounter-start="0"
+                  data-purecounter-end="5"
+                  data-purecounter-duration="1"
+                  class="purecounter"
+                ></span>
+                <p>
+                  <strong>percent hearing impaired children</strong> get basic
+                  schooling.
+                </p>
+                <a
+                  href="https://www.hindustantimes.com/cities/only-5-hearing-impaired-children-go-to-school-in-india/story-wLpw6nntrw5b748Cwng7ZN.html"
+                  >Find out more &raquo;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Counts Section -->
+
+      <section id="features" class="features">
+        <div class="container" data-aos="fade-up">
+          <h3>Challenges faced by the DHH community</h3>
+          <br />
+          <br />
+          <div class="row">
+            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right">
+              <div class="icon-box mt-5 mt-lg-0">
+                <i class="bx bx-receipt"></i>
+                <h4>Non-inclusive society</h4>
+                <p>
+                  Society is tailored according to the hearing community and
+                  thus not accessible to DHH community. Becoming aware and
+                  acknowledging issues faced the DHH community is the first step
+                  for creating a more inclusive environment.
+                </p>
+              </div>
+              <div class="icon-box mt-5">
+                <i class="bx bx-cube-alt"></i>
+                <h4>Communication Gap</h4>
+                <p>
+                  There is huge communication gap & hestitation between the two
+                  communities that can be overcome through a standardized sign
+                  language.
+                </p>
+              </div>
+              <div class="icon-box mt-5">
+                <i class="bx bx-images"></i>
+                <h4>Non-accessible learning resources</h4>
+                <p>
+                  Due to diverse languages and regions in India, there are many
+                  variations of sign languages. Hence, only in 2017, Indian Sign
+                  Language was official recognized to be a source of teaching in
+                  schools.
+                </p>
+              </div>
+              <div class="icon-box mt-5">
+                <i class="bx bx-shield"></i>
+                <h4>Lack of practice</h4>
+                <p>
+                  There is a only a unidirectional mode of learning ISL, that is
+                  through videos. Getting fluent in any language requires
+                  practicing, a feature deliberately added in the forum to
+                  enhance sign skills.
+                </p>
+              </div>
+            </div>
+            <div
+              class="image col-lg-6 order-1 order-lg-2"
+              style="background-image: url('static/assets/img/features4.png')"
+              data-aos="zoom-in"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Features Section -->
+
+      <!-- ======= Pricing Section ======= -->
+      <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Join the community</h2>
+            <p>
+              We at Vikalp have three ways to utilise the platform suited to
+              your current skills in Indian Sign Language. Starting learning the
+              basics using our visual speech to voice convertor and then head
+              over to practicing through one-on-one meets and discussions.
+              Later, you can choose to be a volunteer to teach others ISL or to
+              host virtual fun events.
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="box featured" data-aos="fade-up" data-aos-delay="100">
+                <h3>Learn</h3>
+
+                <ul>
+                  <li>Free Learning Platform</li>
+                  <li>Easy-to-use & Effective Learning Technique</li>
+                  <li>Works through both speech and text</li>
+                  <li>Incoming feature: Gamification of ISL</li>
+                </ul>
+                <div class="btn-wrap">
+                  <a href="/home" class="btn-buy">Learn Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mt-4 mt-md-0">
+              <div class="box featured" data-aos="fade-up" data-aos-delay="200">
+                <h3>Practice</h3>
+
+                <ul>
+                  <li>Practice one-on-one with members of community</li>
+                  <li>Host Virtual Events</li>
+                  <li>Join groups based on your interest</li>
+                  <li>Bridge gap through knowledge exchange</li>
+                </ul>
+                <div class="btn-wrap">
+                  <a href="/practice" class="btn-buy">Join the community</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mt-4 mt-lg-0">
+              <div class="box featured" data-aos="fade-up" data-aos-delay="300">
+                <h3>Contribute</h3>
+
+                <ul>
+                  <li>Upload pictures/photos with labels for ISL</li>
+                  <li>Upload local sign language of your region</li>
+                  <li>Become a volunteer</li>
+                  <li>Sign up to be a tutor</li>
+                </ul>
+                <div class="btn-wrap">
+                  <a href="/sharing" class="btn-buy">Contribute now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Pricing Section -->
+
+      <!-- ======= Departments Section ======= -->
+      <section id="departments" class="departments">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Journey of Vikalp</h2>
+            <p>
+              The idea, the implementation and the deployment has been seeded,
+              planted and watered over the 60 hour hackathon. We have curated
+              Vikalp with the vision of a more inclusive society which is
+              sensitive and friendly to the needs of the Deaf and Limited
+              Hearing Community.
+            </p>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <ul class="nav nav-tabs flex-column">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active show"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab-1"
+                  >
+                    <h4>Thank you Salesforce</h4>
+                    <p></p>
+                  </a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab-2"
+                  >
+                    <h4>TechStack Implemeted</h4>
+                  </a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab-3"
+                  >
+                    <h4>Challenges Faced</h4>
+                    <p></p>
+                  </a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tab-4"
+                  >
+                    <h4>Future Roadmap</h4>
+                    <p></p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-8">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-1">
+                  <h3>Grateful</h3>
+                  <p class="fst-italic">
+                    Thank you Salesforce to teach us on how to be an ally to a
+                    cause.
+                  </p>
+                  <img
+                    src="{% static 'assets/img/dep1.png' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                  <p>
+                    We thank Salesforce for such an innovative theme to make us
+                    realise the difficulties faced by the DHH community and
+                    enable us to build solutions real-time solutions for the
+                    world.
+                  </p>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                  <h3>TechStack Implemented</h3>
+                  <p class="fst-italic"></p>
+                  <img
+                    src="{% static 'assets/img/dep2.png' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                  <ul>
+                    <li>Natural Language Processing: Python</li>
+                    <li>Web Frameworks Backend: Django, Javascript</li>
+                    <li>Web Frontend: HTML5, CSS, Javascript, Bootstrap</li>
+                    <li>Deployment: Heroku</li>
+                  </ul>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                  <h3>Challenges Faced</h3>
+                  <p class="fst-italic">
+                    Where is fun and satisfaction without challenges?
+                  </p>
+                  <img
+                    src="{% static 'assets/img/dep3.jpg' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
+                  <ul>
+                    <li>
+                      No dataset available for ISL. <i>Solution:</i>Scraped off
+                      data from Youtube videos and official site to curate the
+                      handpicked dataset
+                    </li>
+                    <li>
+                      Integration of Speech to Sign feature with
+                      Website<i>Solution:</i>Used Django backend for seemless
+                      integration
+                    </li>
+                    <li>
+                      Initial Barrier of Communication & Co-ordinationn
+                      <i>Solution:</i>Slack Pings, Quip, Git, PhoneCalls, Social
+                      Longe, Coffee & Motivation Talks!!
+                    </li>
+                    <li>Deployment: Heroku</li>
+                  </ul>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                  <h3>Future Roadmap</h3>
+                  <p class="fst-italic">Aligning Plan to Vision</p>
+                  <img
+                    src="{% static 'assets/img/dep4.jpg' %}"
+                    alt=""
+                    class="img-fluid"
+                  />
+
+                  <ul>
+                    <li>
+                      Gamification of App: Adding functionality of earning
+                      points based on accurate ISL recognition through OpenCV
+                      for practicing.
+                    </li>
+                    <li>
+                      Creating customised User Account for tracking points,
+                      displaying groups joined, adding social media links etc
+                    </li>
+                    <li>
+                      Improving Accuracy of NLP processing using semantic
+                      analysis for text processing in speech to sign convertor
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Departments Section -->
+
+      <!-- ======= Doctors Section ======= -->
+      <section id="doctors" class="doctors section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Our Team</h2>
+            <p>
+              We are all open to ideas, improvements and suggestions. Feel free
+              to ping any of us and let us together create a more inclusive
+              world!
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="member-img">
+                  <img
+                    src="{% static 'assets/img/doctors/dev3.png' %}"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Chandrasekhar Rao Ravulapalli</h4>
+                  <span>Mentor, Software Engineering LMTS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="member-img">
+                  <img
+                    src="{% static 'assets/img/doctors/dev1.png' %}"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="social">
+                    <a href="https://mobile.twitter.com/spriha_gautam"
+                      ><i class="bi bi-twitter"></i
+                    ></a>
+
+                    <a href="https://www.instagram.com/spriha_gautam/?hl=en"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/sprihagautam/"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Spriha Gautam</h4>
+                  <span>Intern DPX Team</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="member-img">
+                  <img
+                    src="{% static 'assets/img/doctors/dev2.jpeg' %} "
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a
+                      href="https://www.linkedin.com/in/sweety-kumari-958656190/"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Sweety Kumari</h4>
+                  <span>Intern, Experience Cloud</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+              <div class="member" data-aos="fade-up" data-aos-delay="400">
+                <div class="member-img">
+                  <img
+                    src="{% static 'assets/img/doctors/dev4.jpg' %}"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <div class="social">
+                    <a href=""><i class="bi bi-twitter"></i></a>
+                    <a href="https://www.facebook.com/aman.ahmed.397"
+                      ><i class="bi bi-facebook"></i
+                    ></a>
+                    <a href="https://www.instagram.com/aman_n_s/"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                    <a href="https://www.linkedin.com/in/aman-n-s-5b0099193/"
+                      ><i class="bi bi-linkedin"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="member-info">
+                  <h4>Aman NS</h4>
+                  <span>Intern, Egress Gateway</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Doctors Section -->
+
+      <!-- ======= Frequently Asked Questioins Section ======= -->
+      <section id="faq" class="faq section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Frequently Asked Questioins</h2>
+          </div>
+
+          <ul class="faq-list">
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                class="collapsed question"
+                href="#faq1"
+              >
+                How can I become a volunteer?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  You can become a volunteer by simply signing up on our site.
+                  We will be sending out frequent mails to join up as a
+                  volunteer. The direct link on the site is yet to be added,
+                  though you can contribute directly on the site.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq2"
+                class="collapsed question"
+              >
+                Is learning feature inclusive of both DHH and hearing community?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes, the feature is inclusive and designed to serve customers
+                  of both the communities. Moreover, we have added both speech
+                  and text as input to learn ISL languages offering great user
+                  experience.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div
+                data-bs-toggle="collapse"
+                href="#faq3"
+                class="collapsed question"
+              >
+                What is meant by Gamification of the App?
+                <i class="bi bi-chevron-down icon-show"></i
+                ><i class="bi bi-chevron-up icon-close"></i>
+              </div>
+              <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Gamification of the App ensures that the user is rewarded with
+                  a sense of achievement that motivates them to continue
+                  learning ISL and be an active member of the community.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- End Frequently Asked Questioins Section -->
+
+      <!-- ======= Appointment Section ======= -->
+      <section id="appointment" class="appointment section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Contact us</h2>
+            <p>
+              Contributions, idea exchange and discussions are what make the
+              software developers community such an amazing place to learn,
+              inspire, and create. Any contributions, discussions and
+              suggestions are greatly appreciated.
+            </p>
+          </div>
+
+          <form
+            action="forms/appointment.php"
+            method="post"
+            role="form"
+            class="php-email-form"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="row">
+              <div class="col-md-4 form-group">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="col-md-4 form-group mt-3 mt-md-0">
+                <input
+                  type="tel"
+                  class="form-control"
+                  name="phone"
+                  id="phone"
+                  placeholder="Your Phone"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group mt-3">
+              <textarea
+                class="form-control"
+                name="message"
+                rows="5"
+                placeholder="Message (Optional)"
+              ></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your appointment request has been sent successfully. Thank you!
+              </div>
+            </div>
+            <div class="text-center"><button type="submit">Send</button></div>
+          </form>
+        </div>
+      </section>
+      <!-- End Appointment Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-info">
+                <h3>Vikalp</h3>
+                <p>
+                  Salesforce <br />
+                  Hyderabad, India<br /><br />
+                  <strong>Phone:</strong> +918427704450<br />
+                  <strong>Email:</strong> spriha.gautam@salesforce.com<br />
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                  <a href="#" class="instagram"
+                    ><i class="bx bxl-instagram"></i
+                  ></a>
+                  <a href="#" class="linkedin"
+                    ><i class="bx bxl-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#">Services</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Terms of service</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Privacy policy</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Community Newsletter</h4>
+              <p>
+                Subscribe the Newletter to know more about events, volunteering
+                annd learning opportunities.
+              </p>
+              <form action="" method="post">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>VIKALP</span></strong
+          >. All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>

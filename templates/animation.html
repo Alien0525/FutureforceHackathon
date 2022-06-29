@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="split left">
+	<h2 align="center">Use voice command or type your text! </h2>
+	<br>
+		<form action="" method="post" align="left">
+		{% csrf_token %}
+		<style>
+			/* CSS comes here */
+			body {
+				font-family: arial;
+			}
+			button {
+				padding:10px;
+				background-color:#6a67ce;
+				color: #FFFFFF;
+				border: 0px;
+				cursor:pointer;
+				border-radius: 5px;
+			}
+			#output {
+				background-color:#fffafa;
+				padding:5px;
+				width: 100%;
+				margin-top:15px;
+				line-height:30px;
+			}
+			.hide {
+				display:none;
+			}
+			.show {
+				display:block;
+			}
+		</style>
+					<input type="text" name="sen" class="mytext" id="speechToText" placeholder="">
+					<button type="button" name="button" class="mic" onclick="record()"><img src="{% static 'mic.png' %}" height="32px" width="38px" /></button>
+		  	
+		  			<input type="submit" name="submit" class="submit"><span id="action"></span>
+					  <div id="output" class="hide"></div>
+
+		</form>
+		<br>
+		<table cellspacing="20px">
+			<tr>
+				<td class="td">Here is your sentence</td>
+				<td class="td">{{ text }}</td>
+			</tr>
+			<tr>
+				<td class="td">Key words:</td>
+				<td class="td">
+				<ul class="td" id="list" align="center">
+  					{% for word in words %}
+    				<li id="{{ i }}" style="margin-right: 8px">{{ word }}</li>
+  					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+	</table></div>
+  <div class="split right">
+  <h2 align="center">Sign Language Animation</h2>
+
+	<div style="text-align:center">	&nbsp&nbsp
+  	<button class="submit" onclick="playPause()">Play/Pause</button>
+  	<!--  LETS USE ONLY PLAY PAUSE BUTTON WITH 720 *420 ,IT FITS THE SCREEN ASHISH
+
+  	<button onclick="makeBig()">Big</button>
+  	<button onclick="makeSmall()">Small</button>
+  	<button onclick="makeNormal()">Normal</button>-->
+	<!-- <img src= "" alt="picture" style="width:600px; height:350px;" > -->
+
+  	<video id="videoPlayer" width="600" height="350"  preload="auto" autoplay>
+    	<source src="" type="video/mp4">
+    Your browser does not support HTML5 video.
+  	</video>
+  	</div></div>
+
+
+<script>
+	//webkitSpeechRecognition api for speech to text conversion
+	function record()
+		{
+		        // get output div reference
+		        var output = document.getElementById("output");
+		        // get action element reference
+		        var action = document.getElementById("action");
+                // new speech recognition object
+                var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+                var recognition = new SpeechRecognition();
+            
+                // This runs when the speech recognition service starts
+                recognition.onstart = function() {
+                    action.innerHTML = "<br><small> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  listening, please speak...</small>";
+                };
+                
+                recognition.onspeechend = function() {
+					
+                    action.innerHTML = "<br><p><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stopped listening, hope you are done...</small></p>";
+                    recognition.stop();
+                }
+              
+                // This runs when the speech recognition service returns result
+                recognition.onresult = function(event) {
+                    var transcript = event.results[0][0].transcript;
+                    var confidence = event.results[0][0].confidence;
+					document.getElementById('speechToText').value = (event.results[0][0].transcript.toLowerCase());
+					
+                    output.innerHTML = "<br/> <b>Confidence:</b> " + confidence*100+"%";
+                    output.classList.remove("hide");
+                };
+              
+        //         start recognition
+       recognition.start();
+		// let recognition = new webkitSpeechRecognition();
+		// recognition.lang='en-IN';
+		
+		// recognition.onresult = function(event){
+		// 	console.log(event)
+		// 	document.getElementById('speechToText').value = (event.results[0][0].transcript.toLowerCase());
+
+		// }
+		// recognition.start();
+	 }
+	function play()
+	{
+		var videoSource = new Array();
+		var	videos = document.getElementById("list").getElementsByTagName("li");
+		var j;
+		for(j=0;j<videos.length;j++)
+		{
+			videoSource[j] = "/static/" + videos[j].innerHTML +".mp4";
+		}
+
+		var i = 0; // define i
+		var videoCount = videoSource.length;
+
+		function videoPlay(videoNum)
+		{
+			document.getElementById("list").getElementsByTagName("li")[videoNum].style.color = "#09edc7";
+			document.getElementById("list").getElementsByTagName("li")[videoNum].style.fontSize = "xx-large";
+			document.getElementById("videoPlayer").setAttribute("src", videoSource[videoNum]);
+	    	document.getElementById("videoPlayer").load();
+	    	document.getElementById("videoPlayer").play();
+
+		}
+		document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
+		document.getElementById("list").getElementsByTagName("li")[0].style.color = "#09edc7";
+		document.getElementById("list").getElementsByTagName("li")[0].style.fontSize = "xx-large";
+
+		videoPlay(0); // play the video
+
+		function myHandler()
+		{
+	 		document.getElementById("list").getElementsByTagName("li")[i].style.color = "#feda6a";
+			document.getElementById("list").getElementsByTagName("li")[i].style.fontSize = "20px";
+			i++;
+	    	if (i == videoCount)
+	    	{
+	       	    document.getElementById("videoPlayer").pause();
+	    	}
+	     	else
+	     	{
+	        	videoPlay(i);
+	    	}
+		}
+	}
+
+	function playPause(){
+  		if (document.getElementById("videoPlayer").paused){
+    		play();}
+  		else{
+    		document.getElementById("videoPlayer").pause();}
+		}
+
+	</script>
+
+
+{% endblock %}
